@@ -5,7 +5,7 @@
 
 ## Part 1 - Github Profile
 
-Url: 
+Url: https://github.com/Linuxnerdo792
 
 Name : Research Sharma Bhattarai
 
