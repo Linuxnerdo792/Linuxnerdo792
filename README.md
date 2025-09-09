@@ -3,25 +3,47 @@
 - Name:Research Sharma Bhattarai
 - Email:sharmabhattarai.2@wright.edu
 
-## Part 1 - GitHub Profile
+## Part 1 - Github Profile
 
-1. [GitHub Profile](FIXTHISURL-https://github.com/Linuxnerdo792)
+Name : Research Sharma Bhattarai
+
+Intended Major : Bachelor's In Cyber-Security
+
+Project that i will be working : Simple App to analyze network Traffic
+
+                                 I am planning to build a tool that takes user passwords and hashes them using strong algorithms. I will try
+
+ My description : Hello , I am Research Sharma Bhattarai, this is my sophomore year as a cybersecurity major and i am thinking to make two tools one is for network traffic analysis and lastly a tool to build a tool that takes user passwords and hashes them using strong algortihms.                                
+
 
 ## Part 2 - Research
 
-| Windows | Linux / Mac | Action |
-| *** |   yes         |
-I used linux in virtual box   |
-help    man- It is used to display information about other built-in shell command  |
-Get-Location pwd   - It show us the full location of the directory we are currently working  |
-Get-ChildItem ls   -  It just simply list the contents of the directory or simplay displays the file within the directory.|
- mkdir    mkdir       -It is used to make the directory  |
-Set-Location  cd      It is used to change the directory from one location to another |
-New-Item -touch        It is used to create the new file  |
-Move-Item mv         It is used to move either file or directory from old to new location |
-Copy-Item  cp        It is used to copy file or directory from old to new location  |
-Remove-Item  rm       It is used to remove files and directories from file system      |
- notepad.exe  vim       It is used to open, create or edit .txt file     |
+| Windows | Linux / Mac | Action | 
+
+            Linux
+
+I used linux in virtual box   
+
+help  man-  It is used to display information about other built-in shell command  
+
+Get-Location pwd   - It show us the full location of the directory we are currently working  
+
+Get-ChildItem ls   -  It just simply list the contents of the directory or simplay displays the file within the directory.
+
+ mkdir    mkdir  -     t is used to make the directory  
+ 
+Set-Location  cd   -   It is used to change the directory from one location to another 
+
+New-Item -touch   -     It is used to create the new file  
+
+Move-Item mv      -   It is used to move either file or directory from old to new location 
+
+Copy-Item  cp    -    It is used to copy file or directory from old to new location  
+
+Remove-Item  rm   -    It is used to remove files and directories from file system      
+
+ notepad.exe  vim   -    It is used to open, create or edit .txt file     
+
 
 ## Part 3 - Command Line Navigation
 
