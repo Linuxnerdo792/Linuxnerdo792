@@ -1,5 +1,4 @@
-Hi, I am Research Sharma Bhattarai this is my sophomore year as a cybersecurity major and i am thinking to make two tools one is for network traffic analysis and lastly a tool to build a tool that takes user passwords and hashes them using strong algortihms.                                
-
+Hi, I am Research Sharma Bhattarai this is my sophomore year as a cybersecurity major at Wright State University 
 
 Projects I am Working On:
 
