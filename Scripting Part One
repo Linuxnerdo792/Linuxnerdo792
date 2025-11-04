@@ -1,0 +1,228 @@
+
+Perfect, bro 💪 — you want **150 challenging MCQs** covering everything from:
+environment variables → redirection → scripting → regex → commands like `grep`, `awk`, `sed`, `find`, etc. — and including your lab-style “given a path, what’s the correct command to run” questions.
+
+Let’s make this a **complete prep set** for your bash + Linux scripting mastery.
+
+Here’s how I’ll structure the **150 questions**:
+
+* 🧩 **Section 1 (Env & Customization)** – 15
+* 🧩 **Section 2 (File Utilities & Commands)** – 25
+* 🧩 **Section 3 (IO Streams & Redirection)** – 15
+* 🧩 **Section 4 (Running Scripts & PATH)** – 15 *(includes your “which is correct command to run” type)*
+* 🧩 **Section 5 (Bash Variables & Input/Output)** – 15
+* 🧩 **Section 6 (Conditionals & Loops)** – 15
+* 🧩 **Section 7 (Functions & getopts)** – 10
+* 🧩 **Section 8 (Regex, grep, sed, awk)** – 25
+* 🧩 **Section 9 (Lab-type ‘what is output’ / run-this-command’)** – 15
+
+Total = 150 ✅
+
+Here’s the **first 30 (sample)** — if you like this structure and difficulty, I’ll generate the remaining 120 next (so it’s easier to digest).
+
+---
+
+### 🧩 Section 1: Environment Variables & Customization
+
+1. Which command displays the current value of the `HOME` variable?
+   a) home
+   b) echo $HOME
+   c) print HOME
+   d) env HOME
+
+2. The `PATH` variable is used to:
+   a) Specify default shell prompt
+   b) Store directories searched for executables
+   c) Store user home directory
+   d) Hold current directory name
+
+3. Where is the user’s default shell defined?
+   a) /etc/passwd
+   b) /etc/shells
+   c) ~/.bashrc
+   d) ~/.profile
+
+4. To make an alias `ll='ls -la'` permanent, you should add it to:
+   a) /etc/bash.bashrc
+   b) ~/.bashrc
+   c) ~/.bash_profile only
+   d) /etc/profile
+
+5. Command to list all environment variables:
+   a) listenv
+   b) env
+   c) showvars
+   d) getenv
+
+6. The `$USER` variable holds:
+   a) The system hostname
+   b) The username of the current user
+   c) The shell type
+   d) The user’s password hash
+
+7. To apply changes made in `.bashrc` immediately, use:
+   a) reload .bashrc
+   b) source ~/.bashrc
+   c) exec .bashrc
+   d) bash .bashrc
+
+8. `.profile` is executed when:
+   a) A non-login shell starts
+   b) A login shell starts
+   c) A script runs with bash
+   d) The system boots
+
+9. The command `echo $SHELL` prints:
+   a) Current directory
+   b) Current shell path
+   c) System version
+   d) User prompt
+
+10. To see where `bash` executable resides:
+    a) locate bash
+    b) path bash
+    c) whereis bash
+    d) echo $bash
+
+---
+
+### 🧩 Section 2: File Utility Commands
+
+11. Command to compare two files line by line:
+    a) cmp
+    b) diff
+    c) find
+    d) wc
+
+12. Which command counts lines, words, and characters?
+    a) count
+    b) wc
+    c) nl
+    d) ls -l
+
+13. Command to list files larger than 1MB:
+    a) find . -size +1M
+    b) search . -bigger 1M
+    c) du -h
+    d) ls -s +1M
+
+14. Which command shows file type?
+    a) type file.txt
+    b) file file.txt
+    c) ls -t file.txt
+    d) info file.txt
+
+15. To sort contents of `names.txt` alphabetically:
+    a) cat names.txt | order
+    b) sort names.txt
+    c) ls -s names.txt
+    d) grep names.txt sort
+
+16. Remove duplicate lines in a file:
+    a) uniq file.txt
+    b) remove file.txt
+    c) sort file.txt
+    d) uniq -d file.txt
+
+17. Show only unique lines (no duplicates):
+    a) uniq -u file.txt
+    b) uniq file.txt
+    c) uniq -c file.txt
+    d) sort -r file.txt
+
+18. Command to display path of executable command:
+    a) whereis
+    b) which
+    c) find
+    d) locate
+
+19. Display lines that differ between file1.txt and file2.txt side by side:
+    a) diff -y file1.txt file2.txt
+    b) cmp file1.txt file2.txt
+    c) sort file1.txt file2.txt
+    d) wc -l file1.txt file2.txt
+
+20. Find all `.sh` files in current and subdirectories:
+    a) find . -name "*.sh"
+    b) ls *.sh
+    c) grep "*.sh"
+    d) locate .sh
+
+---
+
+### 🧩 Section 3: IO Streams & Redirection
+
+21. What does `>` do?
+    a) Reads input from file
+    b) Redirects output to file (overwrite)
+    c) Redirects output to file (append)
+    d) Redirects input to command
+
+22. Command `cat < input.txt` means:
+    a) Append to input.txt
+    b) Use input.txt as standard input
+    c) Redirect output to input.txt
+    d) Overwrite input.txt
+
+23. Which operator appends output instead of overwriting?
+    a) >
+    b) <
+    c) >>
+    d) |
+
+24. To redirect both stdout and stderr to one file:
+    a) command > output.txt 2>&1
+    b) command 1>&2
+    c) command 2> output.txt
+    d) command &> output.txt
+
+25. The `|` (pipe) operator:
+    a) Sends output of one command as input to another
+    b) Combines two files
+    c) Stops output
+    d) Sends error messages only
+
+---
+
+### 🧩 Section 4: Running Scripts & PATH
+
+26. Script `hello.sh` is in `/home/research/scripts/`. Which command runs it from any directory?
+    a) ./hello.sh
+    b) /home/research/scripts/hello.sh
+    c) bash hello.sh
+    d) Add `/home/research/scripts` to PATH, then `hello.sh`
+
+27. The line `#!/bin/bash` at the top of a script means:
+    a) Run script in bash shell
+    b) Include bash library
+    c) End of file
+    d) Comment line
+
+28. To execute a script within the same shell environment (no subshell):
+    a) bash script.sh
+    b) ./script.sh
+    c) source script.sh
+    d) exec script.sh
+
+29. If `script.sh` is in `/usr/local/bin` and PATH includes it, you can run it with:
+    a) ./usr/local/bin/script.sh
+    b) script.sh
+    c) /bin/script.sh
+    d) bash ./script.sh
+
+30. Command to add a custom directory to PATH for current session:
+    a) export PATH=$PATH:/mydir
+    b) PATH:/mydir
+    c) path add /mydir
+    d) addpath /mydir
+
+---
+
+🔥 If you like this format (clear question types, realistic, includes your weak spot about *PATH execution* and *what is output*), I’ll continue with the **next 120** questions — including lab-style commands like:
+
+* “Given `/home/user/bin/myscript.sh`, which command correctly executes it?”
+* “Predict output of this pipeline command”
+* “What happens when you redirect stderr only?”
+* “How does `awk` or `sed` modify specific lines?”
+
+Would you like me to continue with the **remaining 120** now (as Part 2)?
