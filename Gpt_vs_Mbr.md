@@ -201,3 +201,145 @@ tar xzvf archive.tar.gz
 If you want, I can also make a **visual one-page diagram** showing **devices → partitions → filesystems → mounting → links → commands** which will make it extremely fast to memorize for finals.
 
 Do you want me to make that diagram?
+
+Sure! Let’s break it into two parts. First, I’ll give you a **detailed comparison of GPT vs MBR** with lots of points, then I’ll create **25 snippet-style questions with answers** for your final prep.
+
+---
+
+## **GPT vs MBR – Detailed Differences**
+
+| Feature                      | MBR (Master Boot Record)                                                 | GPT (GUID Partition Table)                                       |
+| ---------------------------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------- |
+| **Introduction**             | Old standard (1983)                                                      | Modern standard (1990s, popular with UEFI)                       |
+| **Partition Limit**          | 4 primary partitions (or 3 primary + 1 extended with logical partitions) | Up to 128 partitions by default (Linux/Windows)                  |
+| **Disk Size Support**        | Max 2 TB                                                                 | Supports disks larger than 2 TB (up to 9.4 ZB theoretically)     |
+| **Boot Method**              | Works with BIOS                                                          | Works with UEFI (modern firmware)                                |
+| **Partition Table Location** | First sector of the disk                                                 | First sector + backup at end of disk                             |
+| **Redundancy**               | No redundancy                                                            | GPT keeps multiple copies of the partition table for reliability |
+| **Error Checking**           | Basic                                                                    | CRC32 checksum to detect corruption                              |
+| **File System Independence** | Any filesystem can be used                                               | Any filesystem can be used                                       |
+| **Recovery**                 | Difficult, single point of failure                                       | Easier due to backup tables and checksums                        |
+| **Compatibility**            | Supported by almost all OS, older hardware                               | Requires modern OS and UEFI; some older OSes don’t boot from GPT |
+| **Bootloader Storage**       | Bootloader stored in MBR sector                                          | Bootloader usually stored in EFI system partition (ESP)          |
+| **Usage Today**              | Mostly legacy or small drives                                            | Standard for modern PCs, SSDs, NVMe                              |
+
+**Key Notes:**
+
+* GPT is future-proof, MBR is mostly legacy.
+* GPT allows better reliability and more partitions.
+* MBR can still be useful for old BIOS systems or very small disks.
+
+---
+
+## **25 Snippet-Style Questions with Answers**
+
+Here are conceptual and practical snippet questions based on **Filesystems & Disks**:
+
+---
+
+### **Devices & Partitions**
+
+1. **Q:** Check all partitions on a disk `/dev/sda`.
+   **A:** `fdisk -l /dev/sda`
+
+2. **Q:** Show GPT partitions on `/dev/nvme0n1`.
+   **A:** `gdisk -l /dev/nvme0n1`
+
+3. **Q:** Create a new primary partition on `/dev/sdb` using `fdisk`.
+   **A:** `fdisk /dev/sdb` → `n` → `p` → partition number → default size → `w`
+
+4. **Q:** Convert a disk `/dev/sdc` from MBR to GPT using `parted`.
+   **A:** `parted /dev/sdc mklabel gpt`
+
+5. **Q:** Show whether a disk is GPT or MBR.
+   **A:** `parted /dev/sda print` or `gdisk -l /dev/sda`
+
+---
+
+### **Filesystems**
+
+6. **Q:** Create an ext4 filesystem on `/dev/sdb1`.
+   **A:** `mkfs.ext4 /dev/sdb1`
+
+7. **Q:** Check free space on mounted partitions.
+   **A:** `df -h`
+
+8. **Q:** Show disk usage of `/home/user`.
+   **A:** `du -sh /home/user`
+
+9. **Q:** Check inode information of `file.txt`.
+   **A:** `stat file.txt`
+
+10. **Q:** Create a hard link `linkfile` to `file.txt`.
+    **A:** `ln file.txt linkfile`
+
+11. **Q:** Create a symbolic link `symlink` to `file.txt`.
+    **A:** `ln -s file.txt symlink`
+
+12. **Q:** Show all filesystem types available.
+    **A:** `cat /proc/filesystems`
+
+13. **Q:** Mount `/dev/sdb1` to `/mnt`.
+    **A:** `mount /dev/sdb1 /mnt`
+
+14. **Q:** Unmount `/mnt`.
+    **A:** `umount /mnt`
+
+15. **Q:** Make `/dev/sdb1` auto-mount at boot in `/etc/fstab`.
+    **A:** Add line:
+
+    ```
+    /dev/sdb1   /mnt   ext4   defaults   0 0
+    ```
+
+---
+
+### **Compression**
+
+16. **Q:** Create a tar archive `archive.tar` of `folder/`.
+    **A:** `tar cvf archive.tar folder/`
+
+17. **Q:** Create a gzip-compressed tar archive.
+    **A:** `tar czvf archive.tar.gz folder/`
+
+18. **Q:** Extract `archive.tar.gz` to current directory.
+    **A:** `tar xzvf archive.tar.gz`
+
+19. **Q:** Just compress `file.txt` using gzip.
+    **A:** `gzip file.txt`
+
+20. **Q:** Decompress `file.txt.gz`.
+    **A:** `gunzip file.txt.gz`
+
+---
+
+### **Misc / Devices**
+
+21. **Q:** View contents of `/dev/null`.
+    **A:** `cat /dev/null` → outputs nothing
+
+22. **Q:** Read 100 bytes of zeros from `/dev/zero`.
+    **A:** `head -c 100 /dev/zero`
+
+23. **Q:** Generate 16 bytes of random data.
+    **A:** `head -c 16 /dev/random`
+
+24. **Q:** Determine the filesystem type of `/dev/sda1`.
+    **A:** `blkid /dev/sda1`
+
+25. **Q:** Create a new GPT disk `/dev/sdd` and a 500MB partition using `parted`.
+    **A:**
+
+    ```bash
+    parted /dev/sdd
+    mklabel gpt
+    mkpart primary ext4 0% 500MB
+    quit
+    ```
+
+---
+
+If you want, I can also **make another 25+ advanced snippet questions focusing on inodes, links, fstab, mounting options, and tar/gzip variations**. Those will be a bit trickier, perfect for a **final exam drill**.
+
+Do you want me to make that next?
+
